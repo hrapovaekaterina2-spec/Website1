@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Яркий English — Репетитор по английскому</title>
+  <meta name="description" content="Яркие, дружелюбные занятия по английскому — разговорная практика, подготовка к экзаменам. Онлайн." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #ff8a00;
+      --bg-2: #ff3d81;
+      --accent: #fff9c4;
+      --card: rgba(255,255,255,0.95);
+      --glass: rgba(255,255,255,0.12);
+      --muted: #4b4b4b;
+      --shadow: 0 10px 30px rgba(0,0,0,0.12);
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      background: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.06), transparent 5%),
+                  linear-gradient(135deg,var(--bg-1),var(--bg-2));
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:20px 0;color:white
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#fff,#ffd3a5);
+      display:grid;place-items:center;color:var(--bg-2);font-weight:800;font-size:20px;box-shadow:var(--shadow)
+    }
+    h1{font-size:34px;margin:6px 0 0;color:white;line-height:1.03}
+    p.lead{color:rgba(255,255,255,0.95);margin:10px 0 0}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:44px 0 60px
+    }
+    .card{
+      background:var(--card);
+      border-radius:18px;padding:22px;box-shadow:var(--shadow);
+    }
+
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+    .btn{
+      background:linear-gradient(90deg,var(--bg-2),#6a00ff);color:white;padding:12px 18px;border-radius:12px;border:0;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.18)
+    }
+    .btn.ghost{background:transparent;color:white;border:1px solid rgba(255,255,255,0.18)}
+
+    .profile-photo{
+      width:100%;height:100%;aspect-ratio:1/1;border-radius:14px;object-fit:cover;display:block
+    }
+
+    .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+    .stat{background:var(--glass);padding:12px;border-radius:10px;color:white}
+
+    /* Cards column */
+    .column-right{display:flex;flex-direction:column;gap:12px}
+
+    /* Sections */
+    section{margin-top:32px}
+    .about{display:flex;gap:18px;align-items:flex-start}
+    .bio{flex:1}
+    .skills{width:280px}
+
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#fff6e0,#fff1f8);font-weight:700;color:var(--bg-2);margin:6px 6px 6px 0}
+
+    .lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+    .lesson{padding:12px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fffefc);box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .lesson h4{margin:6px 0}
+
+    .testimonials{display:flex;flex-direction:column;gap:12px}
+    .review{padding:14px;border-radius:12px;background:linear-gradient(90deg,#fff,#fffbf5);}
+
+    footer{margin:40px 0 60px;color:rgba(255,255,255,0.95);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .lessons{grid-template-columns:repeat(2,1fr)}
+      .skills{width:100%}
+    }
+    @media (max-width:560px){
+      h1{font-size:26px}
+      .lessons{grid-template-columns:1fr}
+      .brand .logo{width:52px;height:52px;font-size:18px}
+    }
+
+    /* small animations */
+    .logo{transform:rotate(-6deg);transition:transform .45s cubic-bezier(.2,.9,.3,1)}
+    .logo:hover{transform:rotate(0deg) scale(1.03)}
+    .btn{transition:transform .18s ease,box-shadow .18s ease}
+    .btn:hover{transform:translateY(-3px)}
+
+    /* contact form */
+    form input, form textarea{Width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);margin-top:8px}
+    form label{font-weight:600;font-size:14px}
+    .small{font-size:13px;color:var(--muted)}
+
+    .floating-blob{position:absolute;right:-80px;top:120px;opacity:0.12;filter:blur(18px);transform:rotate(16deg)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">ЯE</div>
+        <div style="color:rgba(255,255,255,0.95)">
+          <div style="font-weight:700">Яркий English</div>
+          <div style="font-size:13px;opacity:0.95"> Онлайн-занятия — все уровни</div>
+        </div>
+      </div>
+      <nav style="display:flex;gap:12px;align-items:center">
+        <a href="#about" style="color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600">О преподавателе</a>
+        <a href="#lessons" style="color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600">Занятия</a>
+        <a href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600">Контакты</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <div style="display:flex;align-items:flex-start;gap:18px">
+          <div style="flex:1">
+            <h1>Тёплые и эффективные занятия, которые действительно работают ✨</h1>
+            <p class="lead">Помогаю ученикам говорить уверенно, сдавать экзамены и получать удовольствие от английского — онлайн или лично. Индивидуальные планы, гибкий график и быстрый прогресс.</p>
+
+            <div class="cta-row">
+              <button class="btn">Записаться на пробный урок бесплатно</button>
+              <button class="btn ghost">Посмотреть расписание</button>
+            </div>
+
+            <div class="info-grid">
+              <div class="stat">
+                <div style="font-weight:800;font-size:20px">98%</div>
+                <div class="small">Удовлетворённость учеников</div>
+              </div>
+              <div class="stat">
+                <div style="font-weight:800;font-size:20px">6+</div>
+                <div class="small">Лет преподавания</div>
+              </div>
+            </div>
+
+            <div style="margin-top:14px">
+              <span class="pill">Разговорный английский</span>
+              <span class="pill">Подготовка к школе</span>
+              <span class="pill">Деловой английский</span>
+              <span class="pill">Дети и подростки</span>
+            </div>
+
+          </div>
+
+          <div style="width:220px">
+            <div class="card" style="text-align:center">
+            <img src="images/NF8A1173.jpg" alt="Екатерина Храпова" class="profile-photo">
+              <h3 style="margin:10px 0 2px">Екатерина</h3>
+              <div class="small" style="margin-bottom:12px"></div>
+              <div style="display:flex;justify-content:center;gap:8px">
+                <!-- Кнопка "Написать" -->
+<a href="mailto:anna@brightenglish.example" style="text-decoration:none">
+  <button class="btn" style="padding:8px 12px;font-size:14px">Написать</button>
+</a>
+
+<!-- Кнопка "Связаться" -->
+<a href="#contact" style="text-decoration:none">
+  <button class="btn" style="padding:8px 12px;font-size:14px">Связаться</button>
+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="about" class="card" style="margin-top:18px">
+          <div class="about">
+            <div class="bio">
+              <h3>О преподавателе</h3>
+              <p class="small">Привет — я Екатерина. Помогаю мотивированным ученикам приобрести уверенность в разговоре через практические занятия, понятные объяснения грамматики и полезную лексику. Уроки доброжелательные, структурированные и интересные. Работаю с детьми, взрослыми и кандидатами на экзамены.</p>
+
+              <ul style="margin-top:12px">
+                <li class="small">✅ Индивидуальные учебные планы</li>
+                <li class="small">✅ Разговор с первого занятия</li>
+                <li class="small">✅ Гибкий график и онлайн-занятия</li>
+              </ul>
+
+            </div>
+            <aside class="skills card">
+              <h4 style="margin-top:4px">Кратко</h4>
+              <p class="small">Локация: онлайн </p>
+              <p class="small">Тарифы: от 700 р / 50 мин</p>
+              <p class="small">Тарифы: групповые 2 чел 600 р / 60 мин, от 4 человек 450 р</p>
+		       
+              <p class="small">Языки: английский</p>
+            </aside>
+          </div>
+        </section>
+
+        <section id="lessons" class="card">
+          <h3>Популярные занятия</h3>
+          <div class="lessons">
+            <div class="lesson">
+              <h4>Разговорный импульс</h4>
+              <p class="small">60 минут — интенсивная практика говорения для беглости и уверенности.</p>
+            </div>
+            <div class="lesson">
+              <h4>Экзамен (IELTS)</h4>
+              <p class="small">Плотная практика заданий и стратегии сдачи экзамена.</p>
+            </div>
+            <div class="lesson">
+              <h4>Деловой английский</h4>
+              <p class="small">Презентации, деловая переписка и профессиональная лексика.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Отзывы</h3>
+          <div class="testimonials">
+            <div class="review">
+              «Екатерина помогла мне повысить баллы IELTS с 6.0 до 7.5 за три месяца. Уроки практичные и мотивирующие.» — Мария
+            </div>
+            <div class="review">
+              «Мой сын наконец-то полюбил английский. Отличные результаты и тёплый преподаватель.» — Виктор
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="column-right">
+        <div class="card">
+          <h3 id="contact">Контакты и запись</h3>
+          <p class="small">Напишите сообщение — отвечаю в течение 24 часов.</p>
+          <form onsubmit="alert('Это демо‑форма не отправляет письма. Подключите бэкенд или сервис типа Formspree.');return false;">
+            <label>Имя</label>
+            <input type="text" placeholder="Ваше имя" required>
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com" required>
+            <label>Сообщение</label>
+            <textarea rows="4" placeholder="Расскажите о ваших целях" required></textarea>
+            <div style="margin-top:10px;display:flex;gap:8px">
+              <button class="btn" type="submit">Отправить</button>
+              <a href="tel:+1234567890" style="text-decoration:none"><button type="button" class="btn ghost">Позвонить</button></a>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-top:2px">Расписание (пример)</h4>
+          <p class="small">Пн–Пт: 08:00–20:00 (по записи)</p>
+         
+          <div style="margin-top:10px">
+            <a href="#" style="text-decoration:none"><button class="btn" style="width:100%">Забронировать пробный</button></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Подписка</h4>
+          <p class="small">Instagram • Telegram (https://vk.com/e.s.xrapova) • VK (https://vk.com/e.s.xrapova)</p>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <strong>Яркий English</strong> — Анна Тернер</div>
+      <div class="small">Email: anna@brightenglish.example • Телефон: +1 234 567 890</div>
+    </footer>
+
+    <svg class="floating-blob" width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <g filter="url(#f)">
+        <path d="M283 30c60 30 104 92 105 164 1 73-39 126-96 167-57 41-167 68-225 6-58-62-26-151 26-211 52-60 106-117 190-126z" fill="#ffffff"></path>
+      </g>
+      <defs>
+        <filter id="f" x="0" y="0" width="420" height="420" filterUnits="userSpaceOnUse">
+          <feGaussianBlur stdDeviation="18"/>
+        </filter>
+      </defs>
+    </svg>
+
+  </div>
+</body>
+</html>
